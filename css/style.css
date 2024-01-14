@@ -1,0 +1,317 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Poppins;
+    
+}
+
+body{
+    display: grid;
+    gap: 20px;
+   
+}
+
+/* ---------------------- nav */
+.all
+{
+    /* background-color: rgb(222, 186, 186); */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid #333;
+    height: 100vh;
+
+   
+}
+
+.all .logo
+{
+    /* background-color: rgb(219, 185, 252); */
+    margin-left: 15px;
+    display: block;
+    justify-content: end;
+    margin-top: auto;
+    
+
+}
+.all .logo img
+{
+
+    display: block;
+    width: 20px;
+    margin-top: 10px;
+    flex-direction: column;
+    
+}
+
+.all .logo-nike
+{
+
+    /* background-color: red; */
+
+}
+
+.img1
+{
+    
+    /* filter: var(--green, #c0f046); */
+
+
+    /* background: var(--green, #c0f046); */
+}
+
+.all .logo-nike img
+{
+    /* background-color: red; */
+    width: 55px;
+
+}
+
+/* ---------------------------------------------------- */
+
+main {
+    /* background-color: red; */
+    margin-top: 25px;
+    grid-area: 1 / 2 / 2 / 13;
+    align-self: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+}
+
+.product
+{ 
+    overflow: hidden;
+    border-radius:20px;
+    border: 1.002px solid #333;
+    /* background-color: rgb(165, 43, 43); */
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+
+.product img
+{
+    height: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.product .first-pic
+{
+    border-right: 1px solid #000000;
+    grid-area:1/1/5/5 ;
+    border-bottom: none;
+
+
+}
+
+.product .last 
+{
+    background-color: rebeccapurple;
+    border-bottom: none;
+
+}
+
+.product-price 
+{
+    grid-area: 1/1/5/5;
+    place-self: start;
+}
+
+.product-price p
+{
+    color: #333;
+    font-family: Poppins;
+    margin-left: 19px;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+/* ---------------------------------------------------- */
+
+.description
+{
+    display: flex;
+flex-direction: column;
+/* justify-content: space-between; */
+align-items: flex-start;
+flex-shrink: 0;
+    margin-left: 20px;
+    /* background-color: rgba(255, 0, 0, 0.386); */
+}
+
+.description h1
+{
+    color: #333;
+font-family: Poppins;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+text-transform: capitalize;
+/* background-color: blue; */
+}
+
+.description p{
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 16px;
+}
+
+.description .swatches
+{ 
+    /* background-color: rebeccapurple; */
+   display: flex;
+    margin-top: 20px;
+}
+
+.description .swatches button
+{
+    margin-right: 10px;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+/* ------------------------------------ */
+
+.description .swatches .jaune
+{
+    background-color: #C7FF3F;
+    
+}
+
+.description .swatches .jaune .white-circle {
+
+    border: 1px solid black;
+    transform: translate(20%, -0%);
+    width: 20px;
+    height: 20px;
+    background-color: white; /* Couleur blanche */
+    border-radius: 50%;
+  }
+
+/* ------------------------------------ */
+
+.description .swatches .rouge
+{
+    background-color: #FB3007;
+}
+
+.description .swatches .violet
+{
+    background-color: #7E1A5E;
+}
+
+.description .buy
+{
+/* margin-top: 300px; */
+display: flex;
+padding: 12px 70px;
+border-radius: 10px;
+background: #333;
+font-size: 16px;
+margin-top: auto;
+color: white;
+}
+
+
+.spirit {
+
+    /* Placer l’image dans sa zone de grille */
+    grid-area: 1 / 2 / 2 / 13;
+    /* Couvrir tout l’espace disponible dans la zone */
+    height: 100%;
+    object-fit: contain;
+    /* Caler l’image en haut à droite de la zone */
+    object-position: top right;
+    width: 913px;
+    flex-shrink: 0;
+
+}
+
+
+/* -----------------------responsive -------------------------------- */
+
+
+
+@media only screen and (max-width: 1024px) {
+
+    .all 
+    {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        border-bottom: 1px solid #000000;
+        order: -1;
+        margin-bottom: 0
+
+    }
+
+    .all .logo
+    {
+        display: flex;
+        margin: auto 30px;
+    }
+
+    .all .logo img
+    {
+         margin-right: 5px; 
+    }
+
+    main
+    {
+        margin-top: 100px;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .all {
+        position: absolute;
+        width: 100%;
+    }
+
+    .all .logo {
+        margin: auto 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        margin-top: 100px; /* Ajustez cette valeur pour centrer verticalement main */
+    }
+
+    .product {
+        margin: auto 20px auto  auto; 
+    }
+
+    .description .buy {
+        margin-top: 20px;
+    }
+
+    .spirit {
+    
+        object-position: bottom left;
+        height: 100vh;
+        width: 100%;
+
+        object-fit: contain;
+    }
+}
