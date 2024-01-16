@@ -197,7 +197,7 @@ text-transform: capitalize;
     transform: translate(20%, -0%);
     width: 20px;
     height: 20px;
-    background-color: white; /* Couleur blanche */
+    background-color: white; 
     border-radius: 50%;
   }
 
